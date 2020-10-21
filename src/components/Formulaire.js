@@ -36,7 +36,7 @@ export default class Formulaire extends React.Component {
   }
 
   validate = (e) => {
-    e.preventDefault()
+    git 
     
     let x = this.state
     for (let i = 0; i < x.inputs.length; i++) {

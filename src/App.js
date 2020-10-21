@@ -1,6 +1,6 @@
 import React from 'react';
-import Formulaire from './compenants/Formulaire';
-import Profil from './compenants/Profil';
+import Formulaire from './components/Formulaire';
+import Profil from './components/Profil';
 
 function App() {
   return (
