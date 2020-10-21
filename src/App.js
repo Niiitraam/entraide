@@ -1,12 +1,14 @@
 import React from 'react';
-import Profil from './components/Profil'
-import Formulaire from './components/Formulaire'
+import Formulaire from './components/Formulaire';
+import Profil from './components/Profil';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   return (
     <div>
-      <Formulaire/>
-      <Profil/>
+     <Formulaire/>
+     <Profil/>
     </div>
   );
 }

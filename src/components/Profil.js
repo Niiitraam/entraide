@@ -1,27 +1,27 @@
 import React, {useState} from 'react'
 import {v4 as uuid} from 'uuid'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Profil = () =>{
     
     const [profil, setProfil] = useState([
-        {id: 1, nom: 'Gang', prenom: 'Yassine', pointFort: ['CSS', 'reactJs'], pointFaible: [], remediation: 'HTML'},
-        {id: 1, nom: 'Elgouchi', prenom: 'Mohamed', pointFort: [], pointFaible: [], remediation: 'CSS'},
-        {id: 1, nom: 'Vandendroos', prenom: 'Valentine', pointFort: [], pointFaible: [], remediation: 'Javascript'},        
+        {id: 1, nom: 'Gang ', prenom: 'Yassine ', pointFort: ['CSS ', 'reactJs '], remediation: [' HTML']},
+        {id: 2, nom: 'Elgouchi ', prenom: 'Mohamed ', pointFort: ['HTML '], remediation: ' CSS'},
+        {id: 3, nom: 'Vandendroos ', prenom: 'Valentine ', pointFort: ['JS ','HTML '], remediation: ' JS'},
+        {id: 4, nom: 'Vandendroos ', prenom: 'Valentine ', pointFort: ['JS ','HTML '], remediation: ' JS'},         
     ])
 
     const liste = profil.map(elements =>{
         return(
-        <li className='li-profil border p-3 m-3' key={elements.profil}><span>Nom: {elements.nom}</span>Prénom: {elements.prenom}<span></span>Point fort: {elements.pointFort}<span>Point faible: {elements.pointFaible}</span><span>Remédiation: {elements.remediation}</span></li>
+        <li className='li-profil border; width:30' id="liste" key={elements.profil}>
+            <div className='utilisateur'>
+            <img src="./img/t2.jpg" alt=""/>
+            </div>
+            <span>Nom: {elements.nom} {elements.prenom}</span><span>Point fort: {elements.pointFort}</span><span> Remédiation: {elements.remediation}</span>
+            <button className='btn-li'>S'inscrire</button>
+        </li>
         )
     })
-
-    const addNewProfil= (newProfil) =>{
-        setProfil([...profil, {
-            id: uuid(),
-            profil: newProfil
-        }
-        ])
-    }
 
     return(
         <div>
