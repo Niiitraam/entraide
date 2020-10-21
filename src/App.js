@@ -1,16 +1,20 @@
 import React from 'react';
-import Formulaire from './components/Formulaire';
-import Profil from './components/Profil';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Biographie from './components/Biographie';
+import Footer from './components/Footer';
+import Profil from './components/Profil'
+import Formulaire from './components/Biographie'
+class App extends React.Component{
 
+  render() {
 
-function App() {
-  return (
-    <div>
-     <Formulaire/>
-     <Profil/>
-    </div>
-  );
+    return(
+      <div>
+        <Formulaire/>
+        <Profil/>
+        
+        <Footer />
+      </div>
+    )
+  }
 }
-
 export default App;
