@@ -9961,6 +9961,10 @@ input {
   max-width: max-content;
 }
 
+.color-white {
+  color: white;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
@@ -10000,6 +10004,12 @@ footer {
 footer .row #mauvee {
   background-color: white;
 }
+.titre {
+  text-align: center;
+  margin: 40px;
+  padding-top: 20px;
+}
+
 .PopUp {
   position: fixed;
   display: flex;

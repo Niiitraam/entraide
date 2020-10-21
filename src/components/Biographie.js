@@ -4,6 +4,7 @@ export default class Biographie extends React.Component{
 render(){
 return(
     <div className="container bg-light">
+        <h1 className='titre'>Biographie</h1>
         <div className="row m-0">
             <div className="col-6">
                 <div className="text-center">

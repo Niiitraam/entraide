@@ -5,7 +5,7 @@ render(){
 return(
 <div>
     <footer>
-        <div className="row mt-5 p-0 ">
+        <div className="row mt-5 p-0 m-0">
             <div className="col-4 u m-auto">
             <div className="d-flex justify-content-center align-items-center p-5">
                     <h1 className="text-white">Molengeek</h1>

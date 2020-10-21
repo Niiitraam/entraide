@@ -7,6 +7,7 @@ export default function Navbar() {
   const [background, setBackground] = useState({
     validate: false
   })
+  
   const changeColor = () => {
     let x = {...background}
     if (x.validate === false) {
@@ -19,16 +20,14 @@ export default function Navbar() {
       })
     }
     console.log(background.validate);
-  
-
 
   }
 
 
   return (
-    <div className="">
-      <nav id="navcolor" className={`navbar navbar-expand-lg w-100 mb-4 ${background.validate === true ? "bg-dark" : "bg-white"}`}>
-        <a id="wano" className="navbar-brand font-weight-bold text-primary  " href="#">Wano</a>
+    <div>
+      <nav id="navcolor" className={`navbar navbar-expand-lg w-100 mb-4 ${background.validate === true ? "bg-dark" : "bg-white"} `}>
+        <a id="wano" className="navbar-brand font-weight-bold text-secondary " href="#">Wano</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
