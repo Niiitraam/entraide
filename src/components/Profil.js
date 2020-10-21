@@ -29,6 +29,7 @@ const Profil = () =>{
             <ul className='li-placement'>
                 {liste}
             </ul>
+           
         </div>
     )
 }
