@@ -6,9 +6,11 @@ const Profil = () =>{
     
     const [profil, setProfil] = useState([
         {id: 1, nom: 'Gang ', prenom: 'Yassine ', pointFort: ['CSS ', 'reactJs '], remediation: [' HTML']},
-        {id: 2, nom: 'Elgouchi ', prenom: 'Mohamed ', pointFort: ['HTML '], remediation: ' CSS'},
-        {id: 3, nom: 'Vandendroos ', prenom: 'Valentine ', pointFort: ['JS ','HTML '], remediation: ' JS'},
-        {id: 4, nom: 'Vandendroos ', prenom: 'Valentine ', pointFort: ['JS ','HTML '], remediation: ' JS'},         
+        {id: 2, nom: 'Elgouchi ', prenom: 'Mohamed ', pointFort: ['HTML '], remediation: []},
+        {id: 3, nom: 'Vandendroos ', prenom: 'Valentine ', pointFort: ['JS ','HTML '], remediation: []},
+        {id: 4, nom: 'MonkeyD ', prenom: 'Luffy ', pointFort: ['JS ','HTML '], remediation: ' JS'},
+        {id: 5, nom: 'Seyour ', prenom: 'Rashid ', pointFort: ['JS ','HTML '], remediation: ' JS'}, 
+        {id: 6, nom: 'Boulanger ', prenom: 'Grégoir ', pointFort: ['JS ','HTML '], remediation: ' JS'}, 
     ])
 
     const liste = profil.map(elements =>{

@@ -40,9 +40,7 @@ export default class Formulaire extends React.Component {
     let x = this.state
     for (let i = 0; i < x.inputs.length; i++) {
       if (x.inputs[i].validate === true) {
-        console.log("vous etes bon " + this.state.inputs[i].nom);
-      } else{
-        console.log("vous etes mauvais en " +this.state.inputs[i].nom);
+        console.log(this.state.inputs[i].nom);
       }
     }
     this.setState(x)
