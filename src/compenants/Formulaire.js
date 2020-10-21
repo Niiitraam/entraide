@@ -24,6 +24,7 @@ export default class Formulaire extends React.Component {
     ]
   }
 
+  
   handleValidate = (i) => {
     let x = this.state
     if (x.inputs[i].validate === false) {
@@ -32,15 +33,17 @@ export default class Formulaire extends React.Component {
       x.inputs[i].validate = false
     }
     this.setState(x)
-    console.log(this.state.inputs[i].validate);
   }
 
   validate = (e) => {
     e.preventDefault()
+    
     let x = this.state
     for (let i = 0; i < x.inputs.length; i++) {
       if (x.inputs[i].validate === true) {
-        console.log(this.state.inputs[i].nom);
+        console.log("vous etes fort " +this.state.inputs[i].nom);
+      } else{
+        console.log ("vous avez besoin d'aide " + this.state.inputs[i].nom);
       }
     }
     this.setState(x)
@@ -64,7 +67,7 @@ export default class Formulaire extends React.Component {
         {/* les labels */}
 
         <div className="form-group">
-          <h5>Point fort :</h5>
+          <h5>Nous avons crée un algorithme qui permet de vous mettre en contact avec une personne qui pourras vous aidez et que vous pourrez aider dans les cours de molengeek :</h5>
         </div>
 
         <div className="row ml-1">
@@ -78,65 +81,6 @@ export default class Formulaire extends React.Component {
             )
           })}
         </div>
-
-        {/* les labels 2*/}
-
-        <div className="form-group">
-          <h5>Point faible :</h5>
-        </div>
-
-        <div className="row ml-1">
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input " id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">HTML</label>
-          </div>
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">CSS</label>
-          </div>
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">JavaScript</label>
-          </div>
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">React</label>
-          </div>
-        </div>
-
-        {/* les label 3 */}
-
-        <div className="form-group">
-          <h5>Besoin de remediation :</h5>
-        </div>
-
-        <div className="row ml-1">
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input " id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">HTML</label>
-          </div>
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">CSS</label>
-          </div>
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">JavaScript</label>
-          </div>
-
-          <div className="form-group form-check p-3">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">React</label>
-          </div>
-        </div>
-
 
         <button onClick={(e) => this.validate(e)} type="submit" className="btn btn-primary">Connexion</button>
       </form>
