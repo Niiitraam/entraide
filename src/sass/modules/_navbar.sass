@@ -1,0 +1,87 @@
+body
+    margin: 0px
+    background-image: url("../img/giphy.gif")
+    background-size: cover
+    height: 80vh
+    width: 100%
+    background-position: center
+
+button
+    outline: none
+
+.img-back
+    // background-image: url("../../public\img\giphy.gif")
+    // background-size: cover
+    // height: 80vh
+    // width: 100%
+    // background-position: center
+#navcolor
+    // opacity: 10%
+    background: #c28cd8cc
+    z-index: 100
+    height: 100px
+    
+
+
+.btn-12
+  position: relative
+  right: 20px
+  bottom: 20px
+  border: none
+  width: 130px
+  height: 40px
+  line-height: 40px
+  -webkit-perspective: 230px
+  perspective: 230px
+
+  span
+    display: block
+    position: absolute
+    width: 130px
+    height: 40px
+    border: 2px solid #000
+    margin: 0
+    text-align: center
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    -webkit-transition: all .3s
+    transition: all .3s
+
+    &:nth-child(1)
+      box-shadow: -7px -7px 20px 0px #7906fdc4, -4px -4px 5px 0px #2a08ece8, 7px 7px 20px 0px #0eee0ec7, 4px 4px 5px 0px #7906fdc4
+      -webkit-transform: rotateX(90deg)
+      -moz-transform: rotateX(90deg)
+      transform: rotateX(90deg)
+      -webkit-transform-origin: 50% 50% -20px
+      -moz-transform-origin: 50% 50% -20px
+      transform-origin: 50% 50% -20px
+
+    &:nth-child(2)
+      -webkit-transform: rotateX(0deg)
+      -moz-transform: rotateX(0deg)
+      transform: rotateX(0deg)
+      -webkit-transform-origin: 50% 50% -20px
+      -moz-transform-origin: 50% 50% -20px
+      transform-origin: 50% 50% -20px
+
+  &:hover span
+    &:nth-child(1)
+      -webkit-transform: rotateX(0deg)
+      -moz-transform: rotateX(0deg)
+      transform: rotateX(0deg)
+
+    &:nth-child(2)
+      background: #b209b8
+      color: #7906fdc4
+      -webkit-transform: rotateX(-90deg)
+      -moz-transform: rotateX(-90deg)
+      transform: rotateX(-90deg)
+
+.collapse
+    ul
+        li
+            margin: 0 20px
+
+body 
+  

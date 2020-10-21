@@ -1,19 +1,19 @@
 import React from 'react';
-import Formulaire from './components/Formulaire';
-import Navbar from './components/navbar';
-import Profil from './components/Profil';
+import Biographie from './components/Biographie';
+import Footer from './components/Footer';
+import Profil from './components/Profil'
+import Formulaire from './components/Formulaire'
+import Navbar from './components/Navbar'
 
-export default function App() {
-
-  
-
+function App() {  
   return (
-
     <div>
       <Navbar />
-      <Formulaire />
-      <Profil />
+      <Formulaire/>
+      <Profil/>
+      <Biographie/>
+      <Footer/>
     </div>
-
-  )
+  );
 }
+export default App;
