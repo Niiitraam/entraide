@@ -3,7 +3,7 @@ import React from 'react';
 export default class Biographie extends React.Component{
 render(){
 return(
-    <div className="container">
+    <div className="container bg-light">
         <div className="row m-0">
             <div className="col-6">
                 <div className="text-center">

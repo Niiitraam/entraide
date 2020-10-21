@@ -2,19 +2,18 @@ import React from 'react';
 import Biographie from './components/Biographie';
 import Footer from './components/Footer';
 import Profil from './components/Profil'
-import Formulaire from './components/Biographie'
-class App extends React.Component{
+import Formulaire from './components/Formulaire'
+import Navbar from './components/Navbar'
 
-  render() {
-
-    return(
-      <div>
-        <Formulaire/>
-        <Profil/>
-        
-        <Footer />
-      </div>
-    )
-  }
+function App() {  
+  return (
+    <div>
+      <Navbar />
+      <Formulaire/>
+      <Profil/>
+      <Biographie/>
+      <Footer/>
+    </div>
+  );
 }
 export default App;
