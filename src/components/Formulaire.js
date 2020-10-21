@@ -21,9 +21,12 @@ export default class Formulaire extends React.Component {
         value: "ReactJS",
         validate: false,
       },
-    ]
+    ],
+    valeurPersonne : [],
+    nom : "",
+    prenom : ""
   }
-
+ 
   
   handleValidate = (i) => {
     let x = this.state
@@ -36,32 +39,48 @@ export default class Formulaire extends React.Component {
   }
 
   validate = (e) => {
-    git 
+    e.preventDefault()
     
     let x = this.state
+    let personne = {
+      nom : x.nom,
+      prenom : x.prenom,
+      pointFort : [],
+      remediation : []
+    }
     for (let i = 0; i < x.inputs.length; i++) {
       if (x.inputs[i].validate === true) {
-        console.log("vous etes fort " +this.state.inputs[i].nom);
+        personne.pointFort.push(x.inputs[i].nom)
       } else{
-        console.log ("vous avez besoin d'aide " + this.state.inputs[i].nom);
+        personne.remediation.push(x.inputs[i].nom)
       }
     }
+    x.valeurPersonne.push(personne)
+    x.nom = ""
+    x.prenom = ""
+    console.log(x.valeurPersonne);
     this.setState(x)
   }
 
+  handleChangeNom = (e) => {
+    this.setState({nom : e.target.value})
+  }
+
+  handleChangePrenom = (e) => {
+    this.setState({prenom : e.target.value})
+  }
   render() {
 
     return (
-
       <form className="container-fluid w-25 mt-5">
         <div className="taille form-group">
           <h5>Nom</h5>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <input onChange={this.handleChangeNom} value={this.state.nom} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
         </div>
 
         <div className="taille form-group">
           <h5>Prenom</h5>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <input onChange={this.handleChangePrenom} value={this.state.prenom} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
         </div>
 
         {/* les labels */}
@@ -83,6 +102,24 @@ export default class Formulaire extends React.Component {
         </div>
 
         <button onClick={(e) => this.validate(e)} type="submit" className="btn btn-primary">Connexion</button>
+        {this.state.valeurPersonne.map((e, i) => {
+          return(
+            <div key={i}>
+              <h2>{e.nom} {e.prenom}</h2>
+              {this.state.valeurPersonne[i].pointFort.map((v, k) => 
+                  <h3 key={k}>{v}</h3>
+                
+              )}
+              {this.state.valeurPersonne[i].remediation.map((v, k) => 
+                  <h3 key={k}>{v}</h3>
+                
+              )}
+            </div>
+            
+
+          
+          )
+        })}
       </form>
     );
   }
