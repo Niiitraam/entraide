@@ -1,11 +1,17 @@
 import React from 'react';
+import Biographie from './components/Biographie';
+import Footer from './components/Footer';
+class App extends React.Component{
 
-function App() {
-  return (
-    <div>
-     
-    </div>
-  );
+  render() {
+
+    return(
+      <div>
+        <Biographie />
+        <Footer />
+
+      </div>
+    )
+  }
 }
-
 export default App;

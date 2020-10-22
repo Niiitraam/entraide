@@ -9896,5 +9896,44 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  font-family: "Work Sans", sans-serif;
+}
+body div .row .col-6 {
+  padding: 0;
+}
+body div .row .col-6 img {
+  width: 100%;
+}
+body div .row .pr {
+  padding: 0;
+}
+body div .row .pr .p-3 p #span2 {
+  background-color: #943A9A;
+  font-family: "Pinyon Script", cursive;
+  font-size: 20px;
+}
+body div .row .pr .present {
+  width: 100%;
+  height: 100%;
+}
+body div .row .pr .present p {
+  color: #943A9A;
+  line-height: 1.8;
+}
+
+#span1 {
+  background-color: #943A9A;
+  font-family: "Pinyon Script", cursive;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #77358F;
+  padding: 0;
+}
+footer .row #mauvee {
+  background-color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
