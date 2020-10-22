@@ -76,6 +76,7 @@ export default class Formulaire extends React.Component {
       if(personne.remediation.toString() === elem.pointFort.toString()){
         prof.nom=elem.nom;
         prof.prenom=elem.prenom;
+        alert("salut " + personne.nom)
         alert("La personne parfaite pour vous aider est " +elem.nom + " " +elem.prenom+ " On vous laisse chercher son profil dans notre section")
         console.log(prof);
 
@@ -106,21 +107,21 @@ export default class Formulaire extends React.Component {
     return (
       <div>
 
-        <form className="container-fluid w-25 mt-5">
+        <form className="bg-light py-5 px-3 container-fluid w-25 mt-5">
           <div className="taille form-group">
-            <h5 className='color-white'>Nom</h5>
+            <h5 className='color-black'>Nom</h5>
             <input onChange={this.handleChangeNom} value={this.state.nom} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
 
           <div className="taille form-group">
-            <h5 className='color-white'>Prenom</h5>
+            <h5 className='color-black'>Prenom</h5>
             <input onChange={this.handleChangePrenom} value={this.state.prenom} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
 
           {/* les labels */}
 
           <div className="form-group">
-            <h5 className='color-white'>Nous avons crée un algorithme qui permet de vous mettre en contact avec une personne qui pourra vous aider et que vous pourrez aider dans les cours de MolenGeek :</h5>
+            <h5 className='color-black'>Cochez vos difficultées</h5>
           </div>
 
           <div className="row ml-1">
@@ -128,7 +129,7 @@ export default class Formulaire extends React.Component {
               return (
                 <div key={i} className="form-group form-check p-3">
                   <input onChange={() => this.handleValidate(i)} value={e.value} type="checkbox" className="form-check-input " id="exampleCheck1" />
-                  <label className="form-check-label color-white" htmlFor="exampleCheck1">{e.nom}</label>
+                  <label className="form-check-label color-black" htmlFor="exampleCheck1">{e.nom}</label>
                 </div>
 
               )

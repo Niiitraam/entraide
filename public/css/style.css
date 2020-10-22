@@ -9965,6 +9965,10 @@ input {
   color: white;
 }
 
+.color-black {
+  color: black;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
